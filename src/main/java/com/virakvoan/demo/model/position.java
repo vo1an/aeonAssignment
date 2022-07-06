@@ -12,21 +12,21 @@ import javax.persistence.Table;
 public class position {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="ID")
-        private Long id;
+    @Column(name="position_id")
+        private Long posId;
     
-    @Column(name="positionName")
+    @Column(name="position_name")
     private String posName;
     
     @Column(name="description")
     private String desc;
 
 	public Long getId() {
-		return id;
+		return posId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId(Long posId) {
+		this.posId = posId;
 	}
 
 	public String getPosName() {
@@ -44,4 +44,6 @@ public class position {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
+
+	
 }
