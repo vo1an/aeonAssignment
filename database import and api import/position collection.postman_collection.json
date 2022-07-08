@@ -1,0 +1,99 @@
+{
+	"variables": [],
+	"info": {
+		"name": "position collection",
+		"_postman_id": "63b0c873-f3c7-0171-3e86-726317f142a8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create position",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "user",
+						"password": "pwd",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://localhost:8080/api/positions",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwd2Q=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\t\r\n    \"posName\":\"deliverer\",\r\n    \"desc\":\"deliver products customers bought to their houses\"\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get positions",
+			"request": {
+				"url": "http://localhost:8080/api/positions",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete position",
+			"request": {
+				"url": "http://localhost:8080/api/positions/2",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwd2Q=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Welcome page",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "user",
+						"password": "pwd",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://localhost:8080/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dXNlcjpwd2Q=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
