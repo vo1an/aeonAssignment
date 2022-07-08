@@ -15,11 +15,9 @@ public class SpringSecurityWebAppConfig extends WebSecurityConfigurerAdapter {
     @Override  
     protected void configure(HttpSecurity http) throws Exception {
         http
+        .csrf().disable()
           .authorizeRequests()
           .antMatchers(HttpMethod.GET, "/api/positions").permitAll()
-          .and()
-          .authorizeRequests()
-          .antMatchers("/hello").hasRole("USER")
           .and()
           .authorizeRequests()
           .antMatchers(HttpMethod.POST, "/api/positions").hasRole("USER")
